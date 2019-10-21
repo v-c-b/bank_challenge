@@ -26,7 +26,7 @@ Given a client makes
 - deposit of 2000 on 13-01-201
 - withdrawal of 500 on 14-01-2012
 
-When she prints her bank statement, then she would see:
+When she prints her bank statement, then she would see (without double spacing):
 
 date || credit || debit || balance
 
