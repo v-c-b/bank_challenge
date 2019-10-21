@@ -18,7 +18,7 @@ class Interaction
       prompt = $stdin.gets.chomp
       deposit if prompt == 'deposit'
       withdrawal if prompt == 'withdrawal'
-      #other params to be addded
+      # other params to be addded
     end
   end
 
@@ -38,7 +38,7 @@ class Interaction
 
   def welcometext
     puts 'Welcome to MakersBANK'
-    puts "Today's date is #{self.date}"
+    puts "Today's date is #{@date}"
     puts "Please enter 'deposit' to make a deposit"
   end
 end

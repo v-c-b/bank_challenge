@@ -100,7 +100,9 @@
         1,
         1,
         null,
-        null,
+        null
+      ],
+      "/Users/student/Documents/week10/bank challenge/spec/feature/make_a_withdrawal_spec.rb": [
         1,
         1,
         1,
@@ -170,6 +172,6 @@
         null
       ]
     },
-    "timestamp": 1571658862
+    "timestamp": 1571659135
   }
 }
