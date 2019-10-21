@@ -18,21 +18,22 @@ class Account
 
   def transaction_statement
     print_statement_header
-    @ledger.each do |transaction|
-      puts "#{transaction.date.ljust(12)} #{transaction.credit.to_s.ljust(12)} #{transaction.debit.to_s.ljust(12)} #{transaction.resulting_balance.to_s.ljust(12)}"
+    @ledger.reverse.each do |transaction|
+      puts "#{transaction.date.strftime("%F").ljust(12)} #{transaction.credit.to_s.ljust(12)} #{transaction.debit.to_s.ljust(12)} #{transaction.resulting_balance.to_s.ljust(12)}"
     end
     print_statement_footer
   end
-  
+
   private
 
   def print_statement_header
-    puts ""
-    puts "----- End of statement -----"
+    puts ''
+    puts '-------------- Acount statement --------------'
+    puts "#{'date'.ljust(12)} #{'credit'.ljust(12)} #{'debit'.ljust(12)} #{'balance'.ljust(12)}"
+
   end
 
   def print_statement_footer
-    puts ''
-    puts '----- End of statement -----'
+    puts '-------------- End of statement --------------'
   end
 end

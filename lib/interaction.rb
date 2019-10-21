@@ -14,8 +14,8 @@ class Interaction
 
   def prompt_user_for_transaction
     prompt = ''
-    welcometext
     until prompt == 'exit' do
+      welcometext
       prompt = $stdin.gets.chomp
       deposit if prompt == 'deposit'
       withdrawal if prompt == 'withdrawal'
@@ -43,7 +43,6 @@ class Interaction
 
   def move_date_forward
     @date += 1
-    puts "Date changed to #{@date}"
   end
 
   private
@@ -57,9 +56,4 @@ class Interaction
     puts "Please enter 'next' to see move the date forward by a day"
     puts "Please enter 'exit' to stop"
   end
-
-  # def prompt_and_set_date
-  #   puts 'Enter the date for the transaction in MM-DD-YYYY format'
-  #   @date = $stdin.gets.chomp
-  # end
 end

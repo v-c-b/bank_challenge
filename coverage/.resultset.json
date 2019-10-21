@@ -61,11 +61,6 @@
         5,
         5,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/student/Documents/week10/bank challenge/lib/account.rb": [
@@ -201,6 +196,6 @@
         null
       ]
     },
-    "timestamp": 1571666683
+    "timestamp": 1571666796
   }
 }
