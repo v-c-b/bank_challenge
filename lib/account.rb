@@ -15,4 +15,15 @@ class Account
     @current_balance -= amount
     @ledger.push(Transaction.new(date: date, credit: amount, resulting_balance: @current_balance))
   end
+
+  def transaction_statement
+    puts '-- Beginning of statement --'
+    puts ''
+    puts "#{'date'.ljust(12)} #{'credit'.ljust(12)} #{'debit'.ljust(12)} #{'balance'.ljust(12)}"
+    @ledger.each do |transaction|
+      puts "#{transaction.date.ljust(12)} #{transaction.credit.to_s.ljust(12)} #{transaction.debit.to_s.ljust(12)} #{transaction.resulting_balance.to_s.ljust(12)}"
+    end
+    puts ''
+    puts '----- End of statement -----'
+  end
 end
