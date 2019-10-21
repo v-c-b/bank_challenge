@@ -8,20 +8,25 @@ class Interaction
 
   def initialize
     @account = Account.new
-    @date = Date.new(2012,1, 10)
+    @date = Date.new(2012, 1, 10)
     prompt_user_for_transaction
   end
 
   def prompt_user_for_transaction
     prompt = ''
     until prompt == 'exit' do
-      welcometext
+      print_welcometext
       prompt = $stdin.gets.chomp
-      deposit if prompt == 'deposit'
-      withdrawal if prompt == 'withdrawal'
-      transaction_statement if prompt == 'statement'
-      move_date_forward if prompt == 'next'
-      # other params to be addded - needs refactoring
+      case prompt
+      when 'deposit'
+        deposit
+      when 'withdrawal'
+        withdrawal
+      when 'statement'
+        transaction_statement
+      when 'next'
+        move_date_forward
+      end
     end
   end
 
@@ -29,12 +34,14 @@ class Interaction
     puts 'Enter amount to deposit'
     deposit_amount = $stdin.gets.chomp
     @account.deposit(date: date, amount: deposit_amount.to_i)
+    puts "*** #{deposit_amount} successfully deposited on #{date} ***"
   end
 
   def withdrawal
     puts 'Enter amount to withdraw'
     withdrawal_amount = $stdin.gets.chomp
     @account.withdrawal(date: date, amount: withdrawal_amount.to_i)
+    puts "*** #{withdrawal_amount} successfully withdrawn on #{date} ***"
   end
 
   def transaction_statement
@@ -43,11 +50,12 @@ class Interaction
 
   def move_date_forward
     @date += 1
+    puts "*** Date successfully moved forward to #{date} ***"
   end
 
   private
 
-  def welcometext
+  def print_welcometext
     puts 'Welcome to MakersBANK'
     puts "Today's date is #{@date}"
     puts "Please enter 'deposit' to make a deposit"
