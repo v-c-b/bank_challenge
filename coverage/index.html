@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-21T14:31:44+01:00">2019-10-21T14:31:44+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-21T15:04:43+01:00">2019-10-21T15:04:43+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.22%</span></span>
+    (<span class="covered_percent"><span class="green">92.86%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.18
+         2.24
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>118</b> relevant lines. 
-    <span class="green"><b>110</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>126</b> relevant lines. 
+    <span class="green"><b>117</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,22 +52,22 @@
       
       <tr>
         <td class="strong"><a href="#e95051f86c6879a5d4e476a0991a3a02d77037b4" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
-        <td class="red strong">63.16 %</td>
-        <td>29</td>
-        <td>19</td>
-        <td>12</td>
-        <td>7</td>
-        <td>1.8</td>
+        <td class="red strong">65.22 %</td>
+        <td>38</td>
+        <td>23</td>
+        <td>15</td>
+        <td>8</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#011aad009a26b6df8d2a221e775ed9dbb78564c7" class="src_link" title="lib/interaction.rb">lib/interaction.rb</a></td>
-        <td class="green strong">97.3 %</td>
-        <td>57</td>
-        <td>37</td>
-        <td>36</td>
+        <td class="green strong">97.56 %</td>
+        <td>65</td>
+        <td>41</td>
+        <td>40</td>
         <td>1</td>
-        <td>3.6</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -149,11 +149,11 @@
         <div class="source_table" id="e95051f86c6879a5d4e476a0991a3a02d77037b4">
   <div class="header">
     <h3>lib/account.rb</h3>
-    <h4><span class="red">63.16 %</span> covered</h4>
+    <h4><span class="red">65.22 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>23</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -277,58 +277,112 @@
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">    puts &#39;-- Beginning of statement --&#39;</code>
+          <code class="ruby">    print_statement_header</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">    puts &#39;&#39;</code>
+          <code class="ruby">    @ledger.each do |transaction|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby">    puts &quot;#{&#39;date&#39;.ljust(12)} #{&#39;credit&#39;.ljust(12)} #{&#39;debit&#39;.ljust(12)} #{&#39;balance&#39;.ljust(12)}&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
-          
-          <code class="ruby">    @ledger.each do |transaction|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
-          
           <code class="ruby">      puts &quot;#{transaction.date.ljust(12)} #{transaction.credit.to_s.ljust(12)} #{transaction.debit.to_s.ljust(12)} #{transaction.resulting_balance.to_s.ljust(12)}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">    puts &#39;&#39;</code>
+          <code class="ruby">    print_statement_footer</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">    puts &#39;----- End of statement -----&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def print_statement_header</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">    puts &quot;&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">    puts &quot;----- End of statement -----&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def print_statement_footer</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">    puts &#39;&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    puts &#39;----- End of statement -----&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">end</code>
@@ -342,10 +396,10 @@
         <div class="source_table" id="011aad009a26b6df8d2a221e775ed9dbb78564c7">
   <div class="header">
     <h3>lib/interaction.rb</h3>
-    <h4><span class="green">97.3 %</span> covered</h4>
+    <h4><span class="green">97.56 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
-      <span class="green"><b>36</b> lines covered</span> and
+      <b>41</b> relevant lines. 
+      <span class="green"><b>40</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -365,58 +419,58 @@
           <code class="ruby">require &#39;./lib/transaction.rb&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;date&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Interaction</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :account</code>
+          <code class="ruby">class Interaction</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  attr_reader :account</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">  attr_reader :date</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
+        <li class="covered" data-hits="5" data-linenumber="10">
           <span class="hits">5</span>
           
           <code class="ruby">    @account = Account.new</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
+        <li class="covered" data-hits="5" data-linenumber="11">
           <span class="hits">5</span>
           
-          <code class="ruby">    @date = &#39;01-01-2019&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">    # clean-up before submit</code>
+          <code class="ruby">    @date = Date.new(2012,1, 10)</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="12">
@@ -452,73 +506,73 @@
         <li class="covered" data-hits="5" data-linenumber="17">
           <span class="hits">5</span>
           
+          <code class="ruby">    welcometext</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="18">
+          <span class="hits">5</span>
+          
           <code class="ruby">    until prompt == &#39;exit&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="18">
-          <span class="hits">9</span>
-          
-          <code class="ruby">      welcometext</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="19">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="12" data-linenumber="19">
+          <span class="hits">12</span>
           
           <code class="ruby">      prompt = $stdin.gets.chomp</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="20">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="12" data-linenumber="20">
+          <span class="hits">12</span>
           
           <code class="ruby">      deposit if prompt == &#39;deposit&#39;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="21">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="12" data-linenumber="21">
+          <span class="hits">12</span>
           
           <code class="ruby">      withdrawal if prompt == &#39;withdrawal&#39;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="22">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="12" data-linenumber="22">
+          <span class="hits">12</span>
           
           <code class="ruby">      transaction_statement if prompt == &#39;statement&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="12" data-linenumber="23">
+          <span class="hits">12</span>
           
-          
-          <code class="ruby">      # other params to be addded - needs refactoring</code>
+          <code class="ruby">      move_date_forward if prompt == &#39;next&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      # other params to be addded - needs refactoring</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  def deposit</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="28">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    prompt_and_set_date</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="29">
@@ -560,136 +614,184 @@
         <li class="covered" data-hits="2" data-linenumber="35">
           <span class="hits">2</span>
           
-          <code class="ruby">    prompt_and_set_date</code>
+          <code class="ruby">    puts &#39;Enter amount to withdraw&#39;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="36">
           <span class="hits">2</span>
           
-          <code class="ruby">    puts &#39;Enter amount to withdraw&#39;</code>
+          <code class="ruby">    withdrawal_amount = $stdin.gets.chomp</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="37">
           <span class="hits">2</span>
           
-          <code class="ruby">    withdrawal_amount = $stdin.gets.chomp</code>
+          <code class="ruby">    @account.withdrawal(date: date, amount: withdrawal_amount.to_i)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="38">
           
-          <code class="ruby">    @account.withdrawal(date: date, amount: withdrawal_amount.to_i)</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">  def transaction_statement</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="41">
           
           
           <code class="ruby">    @account.transaction_statement</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def move_date_forward</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="45">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @date += 1</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="46">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    puts &quot;Date changed to #{@date}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
           <code class="ruby">  def welcometext</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="48">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="5" data-linenumber="52">
+          <span class="hits">5</span>
           
           <code class="ruby">    puts &#39;Welcome to MakersBANK&#39;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="49">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="5" data-linenumber="53">
+          <span class="hits">5</span>
           
           <code class="ruby">    puts &quot;Today&#39;s date is #{@date}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="50">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="5" data-linenumber="54">
+          <span class="hits">5</span>
           
           <code class="ruby">    puts &quot;Please enter &#39;deposit&#39; to make a deposit&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="covered" data-hits="5" data-linenumber="55">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    puts &quot;Please enter &#39;withdrawal&#39; to make a withdrawal&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="56">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    puts &quot;Please enter &#39;statement&#39; to see your statement&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="57">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    puts &quot;Please enter &#39;next&#39; to see move the date forward by a day&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="58">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    puts &quot;Please enter &#39;exit&#39; to stop&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="61">
           
-          <code class="ruby">  def prompt_and_set_date</code>
+          
+          <code class="ruby">  # def prompt_and_set_date</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="54">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">    puts &#39;Enter the date for the transaction in DD-MM-YYYY format&#39;</code>
+          
+          <code class="ruby">  #   puts &#39;Enter the date for the transaction in MM-DD-YYYY format&#39;</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="55">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="63">
           
-          <code class="ruby">    @date = $stdin.gets.chomp</code>
+          
+          <code class="ruby">  #   @date = $stdin.gets.chomp</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">end</code>
@@ -808,7 +910,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;deposit&#39;, &#39;21-10-2019&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
+          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;next&#39;, &#39;deposit&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -820,7 +922,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(session.date).to eq(&#39;21-10-2019&#39;)</code>
+          <code class="ruby">    expect(session.date).to eq(Date.new(2012,1, 11))</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
@@ -844,7 +946,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;deposit&#39;, &#39;21-10-2019&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
+          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;deposit&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
@@ -862,7 +964,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(session.account.ledger[0].date).to eq(&#39;21-10-2019&#39;)</code>
+          <code class="ruby">    expect(session.account.ledger[0].date).to eq(Date.new(2012,1, 10))</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
@@ -917,7 +1019,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;withdrawal&#39;, &#39;21-10-2019&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
+          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;next&#39;, &#39;withdrawal&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -929,7 +1031,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(session.date).to eq(&#39;21-10-2019&#39;)</code>
+          <code class="ruby">    expect(session.date).to eq(Date.new(2012,1, 11))</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
@@ -953,7 +1055,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;withdrawal&#39;, &#39;21-10-2019&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
+          <code class="ruby">    allow($stdin).to receive(:gets).and_return(&#39;next&#39;, &#39;withdrawal&#39;, &#39;500&#39;, &#39;exit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
@@ -971,7 +1073,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(session.account.ledger[0].date).to eq(&#39;21-10-2019&#39;)</code>
+          <code class="ruby">    expect(session.account.ledger[0].date).to eq(Date.new(2012,1, 11))</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
